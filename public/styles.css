@@ -1,0 +1,15 @@
+:root {
+  color-scheme: dark light;
+}
+body {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+h1 {
+  margin-inline: auto;
+  text-align: center;
+}
