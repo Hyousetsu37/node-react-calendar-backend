@@ -1,6 +1,6 @@
 /* 
     User routes / Auth
-    host+/apu/auth
+    host+/api/auth
  */
 
 const { Router } = require('express');

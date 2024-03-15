@@ -1,9 +1,7 @@
 //* This is used to get intellisense help inside this file
 const { response } = require('express');
-const { validationResult } = require('express-validator');
 const User = require('../models/User');
-const bcrypt = require('bcryptjs/dist/bcrypt');
-const { genSalt, genSaltSync, hashSync, compareSync } = require('bcryptjs');
+const { genSaltSync, hashSync, compareSync } = require('bcryptjs');
 const { generateJWT } = require('../helpers/JWT');
 
 const createUser = async (req, res = response) => {
@@ -11,7 +9,7 @@ const createUser = async (req, res = response) => {
   try {
     let user = User.findOne({ email });
 
-    if (null) {
+    if (user === null) {
       return res.status(400).json({
         ok: false,
         msg: `User with the email ${email} already exist`,
